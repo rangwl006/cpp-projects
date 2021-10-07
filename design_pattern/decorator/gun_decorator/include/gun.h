@@ -8,40 +8,52 @@ using std::endl;
 // base/core/non-optional class
 class Gun
 {
-    public:
-        Gun()
-        {
-            cout << "Gun(): " << this << endl;
-        }
-        virtual void shoot() = 0;
+public:
+    Gun()
+    {
+        cout << "Gun(): " << this << endl;
+    }
+    virtual void shoot() = 0;
 };
 
-class MachineGun: public Gun
+class MachineGun : public Gun
 {
-    public:
-        MachineGun();
-        void shoot() override;
-    
-    private:
-        int ammo;
+public:
+    MachineGun();
+    void shoot();
+
+private:
+    int ammo;
 };
 
 // this is the decorator/accessory interface
 // decorator inherits from the base
-class MachineGunAccessory: public Gun
+class MachineGunAccessory : public Gun
 {
-    private:
-        Gun* _machineGun;
+private:
+    Gun *_machineGun;
 
-    public:
-        MachineGunAccessory(Gun* machineGun);
-        void shoot();
+public:
+    MachineGunAccessory(Gun *machineGun);
+    void shoot();
 };
 
 // the concrete decoration
-class MachineGunScope: public MachineGunAccessory
+class MachineGunScope : public MachineGunAccessory
 {
-    public:
-        MachineGunScope(Gun* gun);
-        void shoot() override;
+public:
+    MachineGunScope(Gun *gun);
+    void shoot();
+    void zoomIn();
+};
+
+class MachineGunGrenadeAttachment : public MachineGunAccessory
+{
+public:
+    MachineGunGrenadeAttachment(Gun *gun);
+    void shoot();
+    void fireGrenade();
+
+private:
+    int grenades;
 };

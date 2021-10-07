@@ -10,5 +10,5 @@ Facilitates the addtion of behaviors to individual object
 
 ## Two ways to do it
 
-1. aggreate the decorated object
+1. aggregate the decorated object
 2. inherit from the decorated object
