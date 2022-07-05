@@ -32,4 +32,4 @@
 *.app
 
 # ignore all artifacts in bin
-bin/*
+build/*

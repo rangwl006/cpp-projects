@@ -1,5 +1,0 @@
-# ignore all build files
-build/*
-
-#ignore all binary files
-bin/*

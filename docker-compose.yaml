@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  cmake-help:
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    container_name: cmake-help
+    command: "cmake --help"
+  cmake-commands:
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    container_name: cmake-commands
+    command: "cmake -E"
+  design-pattern-builder:
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    container_name: design-pattern-builder
+    volumes:
+      - ./build:/build:rw
+    command: "mkdir /build/test.txt"

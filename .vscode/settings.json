@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "*.ipp": "cpp"
+    },
+    "clang-format.executable": "/usr/bin/clang-format-10",
+    "clang-format.language.cpp.style": "/home/lemma/Documents/cpp-projects/.clang-format",
+    "C_Cpp.clang_format_style": "Google",
+    "C_Cpp.clang_format_fallbackStyle": "Google"
+}
